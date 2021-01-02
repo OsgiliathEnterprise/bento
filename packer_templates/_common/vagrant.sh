@@ -15,5 +15,7 @@ else
     echo "Cannot download vagrant public key";
     exit 1;
 fi
+echo "" >> $HOME_DIR/.ssh/authorized_keys;
 chown -R vagrant $HOME_DIR/.ssh;
-chmod -R go-rwsx $HOME_DIR/.ssh;
+chmod -R 700 $HOME_DIR/.ssh;
+chmod 600 $HOME_DIR/.ssh/authorized_keys;

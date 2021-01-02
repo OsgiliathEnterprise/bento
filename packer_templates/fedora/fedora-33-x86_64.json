@@ -140,6 +140,7 @@
         "{{template_dir}}/scripts/fix-slow-dns.sh",
         "{{template_dir}}/scripts/build-tools.sh",
         "{{template_dir}}/scripts/install-supporting-packages.sh",
+        "{{template_dir}}/scripts/cgroup-vone.sh",
         "{{template_dir}}/../_common/motd.sh",
         "{{template_dir}}/../_common/sshd.sh",
         "{{template_dir}}/../_common/virtualbox.sh",
@@ -148,6 +149,7 @@
         "{{template_dir}}/../_common/vagrant.sh",
         "{{template_dir}}/scripts/real-tmp.sh",
         "{{template_dir}}/scripts/cleanup.sh",
+        "{{template_dir}}/scripts/crypto-policy.sh",
         "{{template_dir}}/../_common/minimize.sh"
       ],
       "type": "shell"

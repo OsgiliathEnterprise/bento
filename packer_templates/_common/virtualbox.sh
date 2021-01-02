@@ -40,11 +40,11 @@ virtualbox-iso|virtualbox-ovf)
 
     echo "removing kernel dev packages and compilers we no longer need"
     if [ -f "/bin/dnf" ]; then
-        dnf remove -y gcc cpp kernel-headers kernel-devel kernel-uek-devel
+        dnf remove -y gcc cpp kernel-devel kernel-uek-devel
     elif [ -f "/bin/yum" ] || [ -f "/usr/bin/yum" ]; then
-        yum remove -y gcc cpp kernel-headers kernel-devel kernel-uek-devel
+        yum remove -y gcc cpp kernel-devel kernel-uek-devel
     elif [ -f "/usr/bin/apt-get" ]; then
-        apt-get remove -y build-essential gcc g++ make libc6-dev dkms linux-headers-`uname -r`
+        apt-get remove -y build-essential gcc g++ make libc6-dev dkms
     elif [ -f "/usr/bin/zypper" ]; then
         zypper -n rm -u kernel-default-devel gcc make
     fi
